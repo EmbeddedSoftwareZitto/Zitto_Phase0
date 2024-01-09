@@ -119,6 +119,7 @@ void Error_Handler(void);
 
 /* USER CODE END Private defines */
 
+extern void SystemClock_Config(void);
 #ifdef __cplusplus
 }
 #endif
