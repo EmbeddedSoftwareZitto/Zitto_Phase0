@@ -60,8 +60,8 @@ all: main-build
 main-build: Zitto_Phase0_Project.elf secondary-outputs
 
 # Tool invocations
-Zitto_Phase0_Project.elf Zitto_Phase0_Project.map: $(OBJS) $(USER_OBJS) C:\Users\Pavithraa\Desktop\Zitto\Embedded_Project\STM\ Project\CAN_Project\STM32F303VCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Zitto_Phase0_Project.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Pavithraa\Desktop\Zitto\Embedded_Project\STM Project\CAN_Project\STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Zitto_Phase0_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Zitto_Phase0_Project.elf Zitto_Phase0_Project.map: $(OBJS) $(USER_OBJS) C:\Users\Pavithraa\Desktop\Zitto\Embedded_Project\Git\Zitto_Phase0\Zitto_Phase0_Project\STM32F303VCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Zitto_Phase0_Project.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Pavithraa\Desktop\Zitto\Embedded_Project\Git\Zitto_Phase0\Zitto_Phase0_Project\STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Zitto_Phase0_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
