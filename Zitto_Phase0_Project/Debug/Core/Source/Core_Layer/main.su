@@ -1,7 +1,7 @@
-../Core/Source/Core_Layer/main.c:76:5:main	8	static
+../Core/Source/Core_Layer/main.c:76:5:main	16	static
 ../Core/Source/Core_Layer/main.c:115:6:SystemClock_Config	128	static
 ../Core/Source/Core_Layer/main.c:166:13:I2C1_Init	8	static
 ../Core/Source/Core_Layer/main.c:214:13:SPI1_Init	8	static
 ../Core/Source/Core_Layer/main.c:254:13:USB_PCD_Init	8	static
-../Core/Source/Core_Layer/main.c:285:13:GPIO_Init	56	static
-../Core/Source/Core_Layer/main.c:333:6:Error_Handler	4	static,ignoring_inline_asm
+../Core/Source/Core_Layer/main.c:285:13:GPIO_Init	4	static
+../Core/Source/Core_Layer/main.c:294:6:Error_Handler	4	static,ignoring_inline_asm

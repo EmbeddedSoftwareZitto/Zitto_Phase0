@@ -1,5 +1,6 @@
 Core/Source/Core_Layer/can.o: ../Core/Source/Core_Layer/can.c \
  C:/Users/Pavithraa/Desktop/Zitto/Embedded_Project/Git/Zitto_Phase0/Zitto_Phase0_Project/Core/Include/Core_Layer/common_header.h \
+ C:/Users/Pavithraa/Desktop/Zitto/Embedded_Project/Git/Zitto_Phase0/Zitto_Phase0_Project/Core/Include/Configuration_Layer/Device_Driver/can_app.h \
  C:/Users/Pavithraa/Desktop/Zitto/Embedded_Project/Git/Zitto_Phase0/Zitto_Phase0_Project/Core/Include/Core_Layer/can.h \
  C:/Users/Pavithraa/Desktop/Zitto/Embedded_Project/Git/Zitto_Phase0/Zitto_Phase0_Project/Core/Include/Core_Layer/main.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h \
@@ -33,8 +34,12 @@ Core/Source/Core_Layer/can.o: ../Core/Source/Core_Layer/can.c \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pwr.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pwr_ex.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h \
- ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi_ex.h
+ ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi_ex.h \
+ C:/Users/Pavithraa/Desktop/Zitto/Embedded_Project/Git/Zitto_Phase0/Zitto_Phase0_Project/Core/Include/Configuration_Layer/Device_Driver/gpio_app.h \
+ C:/Users/Pavithraa/Desktop/Zitto/Embedded_Project/Git/Zitto_Phase0/Zitto_Phase0_Project/Core/Include/Core_Layer/gpio.h \
+ C:/Users/Pavithraa/Desktop/Zitto/Embedded_Project/Git/Zitto_Phase0/Zitto_Phase0_Project/Core/Include/Core_Layer/common_header.h
 C:/Users/Pavithraa/Desktop/Zitto/Embedded_Project/Git/Zitto_Phase0/Zitto_Phase0_Project/Core/Include/Core_Layer/common_header.h:
+C:/Users/Pavithraa/Desktop/Zitto/Embedded_Project/Git/Zitto_Phase0/Zitto_Phase0_Project/Core/Include/Configuration_Layer/Device_Driver/can_app.h:
 C:/Users/Pavithraa/Desktop/Zitto/Embedded_Project/Git/Zitto_Phase0/Zitto_Phase0_Project/Core/Include/Core_Layer/can.h:
 C:/Users/Pavithraa/Desktop/Zitto/Embedded_Project/Git/Zitto_Phase0/Zitto_Phase0_Project/Core/Include/Core_Layer/main.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:
@@ -69,3 +74,6 @@ C:/Users/Pavithraa/Desktop/Zitto/Embedded_Project/Git/Zitto_Phase0/Zitto_Phase0_
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pwr_ex.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi_ex.h:
+C:/Users/Pavithraa/Desktop/Zitto/Embedded_Project/Git/Zitto_Phase0/Zitto_Phase0_Project/Core/Include/Configuration_Layer/Device_Driver/gpio_app.h:
+C:/Users/Pavithraa/Desktop/Zitto/Embedded_Project/Git/Zitto_Phase0/Zitto_Phase0_Project/Core/Include/Core_Layer/gpio.h:
+C:/Users/Pavithraa/Desktop/Zitto/Embedded_Project/Git/Zitto_Phase0/Zitto_Phase0_Project/Core/Include/Core_Layer/common_header.h:

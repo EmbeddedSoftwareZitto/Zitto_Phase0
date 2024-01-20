@@ -1,0 +1,4 @@
+../Core/Source/Core_Layer/gpio.c:43:4:gpio_pin_mux_init_u8	56	static
+../Core/Source/Core_Layer/gpio.c:96:6:gpio_set_direct_output_v	32	static
+../Core/Source/Core_Layer/gpio.c:171:6:gpio_toggle_direct_output_v	32	static
+../Core/Source/Core_Layer/gpio.c:231:6:gpio_get_direct_input_v	40	static
