@@ -11,7 +11,7 @@
 /* Application Header File */
 
 /* Configuration Header File */
-//#include "can_app.h"
+#include "can_app.h"
 //#include "bootsm.h"
 
 /* This header file */
@@ -19,7 +19,6 @@
 /* Driver header */
 //#include "system.h"
 #include "can.h"
-
 
 /* Private Definitions */
 uint8_t can_rx_data_u8[8] = {0};
@@ -61,12 +60,17 @@ U8 can_init_u8()
 	{
 		Error_Handler();/*CAN Init configuration Error */
 	}
-
+	/* Start the CAN module */
+	HAL_CAN_Start(&hcan);
+	/*Enable CAN interrupts*/
+	if (HAL_CAN_ActivateNotification(&hcan, CAN_IT_RX_FIFO0_MSG_PENDING) != HAL_OK)
+	{
+	  Error_Handler(); /*CAN Interrupt Activation Error*/
+	}
+	HAL_NVIC_EnableIRQ(CAN_RX0_IRQn);
+	/* CAN Filter configuration */
 	can_filter_init_v();
-
 	return(ret_val_u8);
-
-
 }
 
 /**
@@ -105,7 +109,7 @@ Description  :
 Input Data   :
 Return Value :
 **/
-U8 can_transmit_data_u8(U8 bank_num_aru8,can_message_tst *msg_arpst)
+U8 can_transmit_data_u8(can_message_tst *msg_arpst)
 {
 	U8 ret_val_u8 = 0;
 
@@ -126,7 +130,7 @@ U8 can_transmit_data_u8(U8 bank_num_aru8,can_message_tst *msg_arpst)
 
 	tx_header_st.RTR = CAN_RTR_DATA;
 
-	if(HAL_CAN_AddTxMessage(&hcan1, &tx_header_st, msg_arpst->data_au8, &tx_mail_box_u32) != HAL_OK)
+	if(HAL_CAN_AddTxMessage(&hcan, &tx_header_st, msg_arpst->data_au8, &tx_mail_box_u32) != HAL_OK)
 	{
 		ret_val_u8 ++;/* CAM Transmission Error */
 	}
@@ -156,6 +160,7 @@ void USB_LP_CAN_RX0_IRQHandler(void)
 	{
 
 	}
+	can_app_0_rx_callback();
 }
 
 /**
@@ -168,7 +173,7 @@ Return Value :
 U8 can_deinit_u8()
 {
 	U8 ret_val_u8 = 0;
-	if(HAL_CAN_DeInit(&hcan1) != HAL_OK)
+	if(HAL_CAN_DeInit(&hcan) != HAL_OK)
 	{
 		ret_val_u8 ++;/* CAN Deinit Error */
 	}
